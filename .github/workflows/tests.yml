@@ -16,15 +16,17 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: employee_db
+          MYSQL_USER: ci_user
+          MYSQL_PASSWORD: ci_password
+          MYSQL_ROOT_PASSWORD: root_password
         ports:
           - 3306:3306
         options: >-
-          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uci_user -pci_password"
           --health-interval=10s
           --health-timeout=5s
-          --health-retries=5
+          --health-retries=10
 
     steps:
       - name: Checkout code
@@ -42,8 +44,8 @@ jobs:
 
       - name: Set database environment variables
         run: |
-          echo "DB_USERNAME=root" >> $GITHUB_ENV
-          echo "DB_PASSWORD=root" >> $GITHUB_ENV
+          echo "DB_USERNAME=ci_user" >> $GITHUB_ENV
+          echo "DB_PASSWORD=ci_password" >> $GITHUB_ENV
           echo "DB_HOST=127.0.0.1" >> $GITHUB_ENV
           echo "DB_PORT=3306" >> $GITHUB_ENV
           echo "DB_NAME=employee_db" >> $GITHUB_ENV
