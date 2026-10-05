@@ -1,0 +1,773 @@
+/* ================================
+   GLOBAL STYLES
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* ================================
+   LOGIN PAGE
+================================ */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f8;
+}
+
+.login-card {
+  width: 380px;
+  padding: 35px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 20px;
+}
+
+/* ================================
+   FORM
+================================ */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 9px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Primary button */
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* Edit button */
+
+.btn-edit {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #d97706;
+}
+
+/* Delete button */
+
+.btn-delete {
+  background: #dc2626;
+  color: white;
+  margin-left: 8px;
+}
+
+.btn-delete:hover {
+  background: #b91c1c;
+}
+
+/* Cancel button */
+
+.btn-cancel {
+  background: #6b7280;
+  color: white;
+  margin-left: 8px;
+}
+
+.btn-cancel:hover {
+  background: #4b5563;
+}
+
+/* ================================
+   DASHBOARD
+================================ */
+
+.dashboard {
+  min-height: 100vh;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  background: #1e293b;
+  color: white;
+  padding: 16px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* ================================
+   DASHBOARD CONTENT
+================================ */
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* ================================
+   STATISTICS CARDS
+================================ */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  transition: 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card h3 {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.stat-card p {
+  margin: 10px 0 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* ================================
+   EMPLOYEE FORM CARD
+================================ */
+
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+
+  margin-bottom: 30px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px 14px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* ================================
+   EMPLOYEE TABLE
+================================ */
+
+.table-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  overflow-x: auto;
+}
+
+.table-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header */
+
+.employee-table th {
+  background: #f1f5f9;
+
+  text-align: left;
+
+  padding: 13px;
+
+  font-size: 14px;
+
+  color: #374151;
+}
+
+/* Table data */
+
+.employee-table td {
+  padding: 13px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  font-size: 14px;
+}
+
+/* Table hover */
+
+.employee-table tr:hover {
+  background: #f8fafc;
+}
+
+/* ================================
+   MESSAGE
+================================ */
+
+.message {
+  margin: 15px 0;
+
+  padding: 10px;
+
+  background: #ecfdf5;
+
+  color: #166534;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+  /* Statistics */
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* Employee form */
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Navbar */
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar h1 {
+    font-size: 18px;
+  }
+
+  /* Dashboard */
+
+  .dashboard-content {
+    padding: 0 10px;
+  }
+
+  /* Login */
+
+  .login-card {
+    width: 90%;
+    padding: 25px;
+  }
+
+  /* Table */
+
+  .table-card {
+    padding: 15px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE DEVICES
+================================ */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .navbar h1 {
+    text-align: center;
+  }
+
+  .navbar button {
+    width: 100%;
+  }
+
+  .form-card {
+    padding: 18px;
+  }
+
+  .table-card {
+    padding: 15px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+/* =========================================
+   MODERN LOGIN PAGE
+========================================= */
+
+.login-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  padding: 30px;
+
+  background-image: url("/office-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+/* Dark/blue overlay */
+
+.login-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 45, 85, 0.65),
+      rgba(30, 64, 175, 0.25)
+    );
+
+  backdrop-filter: blur(2px);
+}
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.login-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 550px;
+
+  padding: 45px 55px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(18px);
+
+  text-align: center;
+}
+
+/* =========================================
+   LOGIN ICON
+========================================= */
+
+.login-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #60a5fa,
+    #2563eb
+  );
+
+  color: white;
+
+  font-size: 34px;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.login-card h1 {
+  margin: 0;
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+  color: #172554;
+
+  letter-spacing: -0.8px;
+}
+
+.login-card h1 span {
+  color: #2563eb;
+}
+
+.login-card h2 {
+  margin: 10px 0 4px;
+
+  font-size: 25px;
+
+  color: #1e3a8a;
+
+  font-weight: 500;
+}
+
+.login-subtitle {
+  margin: 0 0 32px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   LOGIN FORM
+========================================= */
+
+.login-card .form-group {
+  text-align: left;
+
+  margin-bottom: 22px;
+}
+
+.login-card .form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #172554;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+
+  left: 15px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 17px;
+
+  opacity: 0.6;
+
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  width: 100%;
+
+  height: 52px;
+
+  padding: 0 15px 0 48px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  background: rgba(248, 250, 252, 0.9);
+
+  color: #1e293b;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+.input-wrapper input::placeholder {
+  color: #94a3b8;
+}
+
+.input-wrapper input:focus {
+  background: white;
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-button {
+  width: 100%;
+
+  height: 52px;
+
+  margin-top: 5px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.25);
+
+  transition: all 0.25s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.35);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   LOGIN MESSAGE
+========================================= */
+
+.login-card .message {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+
+  color: #1d4ed8;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .login-page {
+    padding: 20px;
+  }
+
+  .login-card {
+    padding: 35px 25px;
+
+    border-radius: 18px;
+  }
+
+  .login-card h1 {
+    font-size: 27px;
+  }
+
+  .login-card h2 {
+    font-size: 21px;
+  }
+
+  .login-icon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 28px;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 28px;
+}
+
+.navbar h1 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.navbar-right span {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.navbar-right .btn {
+  flex-shrink: 0;
+  min-width: 85px;
+  padding: 8px 15px;
+}
