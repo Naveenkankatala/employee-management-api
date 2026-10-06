@@ -3,6 +3,12 @@ import uuid
 import os
 
 from app.main import app
+from tests.conftest import (
+    TEST_ADMIN_PASSWORD,
+    TEST_ADMIN_USERNAME,
+    TEST_USER_PASSWORD,
+    TEST_USER_USERNAME,
+)
 
 
 client = TestClient(app)
@@ -16,8 +22,8 @@ def get_user_token():
     response = client.post(
         "/login",
         data={
-            "username": "testuser_automation2",
-            "password": "Test@12345"
+            "username": TEST_USER_USERNAME,
+            "password": TEST_USER_PASSWORD
         }
     )
 
@@ -39,8 +45,8 @@ def get_admin_token():
     response = client.post(
         "/login",
         data={
-            "username": "Naveen2",
-            "password": "Naveen@1"
+            "username": TEST_ADMIN_USERNAME,
+            "password": TEST_ADMIN_PASSWORD
         }
     )
 

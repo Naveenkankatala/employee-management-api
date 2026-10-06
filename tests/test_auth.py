@@ -3,6 +3,7 @@ import uuid
 import os
 
 from app.main import app
+from tests.conftest import TEST_USER_PASSWORD, TEST_USER_USERNAME
 
 
 client = TestClient(app)
@@ -34,8 +35,8 @@ def test_login_user():
     response = client.post(
         "/login",
         data={
-            "username": "testuser_automation2",
-            "password": "Test@12345"
+            "username": TEST_USER_USERNAME,
+            "password": TEST_USER_PASSWORD
         }
     )
 
@@ -53,7 +54,7 @@ def test_invalid_login():
     response = client.post(
         "/login",
         data={
-            "username": "testuser_automation2",
+            "username": TEST_USER_USERNAME,
             "password": "WrongPassword123"
         }
     )
